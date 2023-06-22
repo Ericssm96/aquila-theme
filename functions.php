@@ -6,3 +6,12 @@ function aquila_script_enqueue() {
 }
 
 add_action('wp_enqueue_scripts', 'aquila_script_enqueue');
+
+function aquila_theme_setup() {
+  add_theme_support('menus');
+  register_nav_menu('primary-menu', 'Primary header navigation');
+  register_nav_menu('secondary-menu', 'Secondary navigation');
+}
+
+//add_action('after_setup_theme', 'aquila_theme_setup'); também é válido
+add_action('init', 'aquila_theme_setup');
