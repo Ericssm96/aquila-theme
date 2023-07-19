@@ -8,6 +8,15 @@
   <title>Document</title>
     <?php wp_head(); ?>
 </head>
-<body>
+
+<?php
+if(is_front_page()):
+    $body_classes = ['teste', 'minha-classe', 'homepage'];
+else:
+    $body_classes = ['not-homepage', 'yoo'];
+endif;
+?>
+
+<body <?php body_class(); ?>>
 
 
