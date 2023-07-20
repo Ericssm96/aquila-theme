@@ -9,6 +9,7 @@ add_action('wp_enqueue_scripts', 'aquila_script_enqueue');
 
 function aquila_theme_setup() {
   add_theme_support('menus');
+  add_theme_support('custom-background');
   add_theme_support('custom-post-types');
   register_nav_menu('primary-menu', 'Primary header navigation');
   register_nav_menu('secondary-menu', 'Secondary navigation');
