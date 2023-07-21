@@ -12,7 +12,9 @@ function aquila_theme_setup() {
   add_theme_support('custom-background');
   add_theme_support('custom-header');
   add_theme_support('post-thumbnails');
-  add_theme_support('custom-post-types');
+  add_theme_support('post-formats', [
+    'aside', 'image', 'video'
+  ]);
   register_nav_menu('primary-menu', 'Primary header navigation');
   register_nav_menu('secondary-menu', 'Secondary navigation');
 }
