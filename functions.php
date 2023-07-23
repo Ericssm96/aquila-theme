@@ -34,3 +34,5 @@ function aquila_widget_setup() {
     'after_title' => '</h1>'
   ]);
 }
+
+add_action('widgets_init', 'aquila_theme_setup');
